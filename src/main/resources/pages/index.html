@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unit Conversion</title>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+    <script src="http://momentjs.com/downloads/moment.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="js/convert.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="css/convert.css">
+</head>
+<body>
+    <h2>Conversions</h2>
+
+    <div id="pickConversion">
+
+        <select class="select" id="select">
+            <option value="Kilometers,Miles">Kilometers -> Miles</option>
+            <option value="Meters,Feet">Meters -> Feet</option>
+            <option value="Centimeters,Inches">Centimeters -> Inches</option>
+            <option value="Liters,Gallons">Liters -> Gallons</option>
+            <option value="Grams,Ounces">Grams-> Ounces</option>
+            <option value="none, none">-----------------</option>
+            <option value="Miles,Kilometers">Miles -> Kilometers</option>
+            <option value="Feet,Meters">Feet -> Meters</option>
+            <option value="Inches,Centimeters">Inches -> Centimeters</option>
+            <option value="Gallons,Liters">Gallons -> Liters</option>
+            <option value="Ounces,Grams">Ounces -> Grams</option>
+        </select>
+        <p><label for="value">Value</label></p>
+        <input id="value" type="text" class="text-field">
+        <button id="submit" class="button" onclick="submit()">Go</button>
+    </div>
+    <div>
+        <h4>Results:</h4>
+        <p id='results'></p>
+    </div>
+</body>
+</html>
